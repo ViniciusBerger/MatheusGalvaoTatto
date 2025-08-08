@@ -7,7 +7,7 @@ export default function Page() {
         <div>
             <Header />
             <div className='flex flex-col min-h-full'>
-                <div className='flex flex-col lg:flex-row min-h-screen bg-gradient-to-r pb-10 from-[#D9D9D9] via-[#F0F0F0] to-[#D9D9D9]'>
+                <div className='flex flex-col lg:flex-row min-h-screen bg-gradient-to-r from-[#D9D9D9] via-[#F0F0F0] to-[#D9D9D9] pb-10'>
                     <Background />
                     
                     <div className='flex flex-col w-full lg:w-2/3'>

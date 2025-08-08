@@ -6,10 +6,11 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 export default function Calendar() {
 
     return (
-        <div>
+        <div className='m-8 p-4 h-full w-dvw-full'>
            <FullCalendar
                 plugins={[ dayGridPlugin ]}
                 initialView="dayGridMonth"
+                contentHeight={600}
                 headerToolbar={{
                     left: 'prev,next today',
                     center: 'title',

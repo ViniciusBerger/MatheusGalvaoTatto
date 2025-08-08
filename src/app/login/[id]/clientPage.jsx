@@ -2,14 +2,20 @@
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import { useState } from 'react'
 import { useEffect } from 'react'
 import { auth } from '@/app/_utils/firebase'
 import Header from '@/app/_components/header/header'
-import Agenda from '@/app/_components/calendar/calendar'
 import Calendar from '@/app/_components/calendar/calendar'
+import Footer from '@/app/_components/footer/footer'
+import Bookings from '@/app/_components/bookings/bookings'
 
 export default function ClientPage({ id }) {
   const [user, loading] = useAuthState(auth)
+
+  const [calendar, setCalendar] = useState(false)
+  const [agendamento, setAgendamentos] = useState(false)
+  
 
    
 
@@ -19,48 +25,66 @@ export default function ClientPage({ id }) {
     }
   }, [user])
 
-  if (loading || !user) return <p>Loading...</p>
+  if (loading || !user) return <p className='text-center text-3xl items-center'>Loading...</p>
 
   return (
   <div>
     <Header />
 
-
-    <div className="bg-gradient-to-r from-[#D9D9D9] via-[#F0F0F0] to-[#D9D9D9] text-black text-5xl p-4 ">
-      <h1 className='mt-24 mx-8 mb-8 border-b-3'>Bem vindo ao dashboard</h1>
-    </div>
-
-
-    <div className="m-0 bg-gradient-to-r from-[#D9D9D9] via-[#F0F0F0] to-[#D9D9D9] text-black h-screen/2 flex justify-center items-center">
+    <div className="flex bg-gradient-to-r from-[#D9D9D9] via-[#F0F0F0] to-[#D9D9D9] text-black justify-center text-5xl p-4">
       
-      <div className="flex w-11/12 mt-16  gap-4 ">  
+      
+      <div className="bg-white flex w-full h-screen m-30 shadow-2xl">
         
-        <div className="flex-1 m-8 mt-0 bg-white rounded-lg p-10 h-1/2 ">
-          
-          
-          <Calendar
-            className="rounded-xl"
-            height="100%"
-            width="100%"
-          />
+        
+        <div className='flex flex-col min-w-1/5 max-w-1/5 bg-black h-screen text-white'> 
+          <h1 className='mt-16 mx-auto'>Overview</h1>
 
-          <div className="flex justify-around items-center mt-12">
-            
-            <button className="bg-[#262628] text-white rounded-lg px-16 py-6 text-2xl"> <Link href={"/addEvent"}> Adicionar</Link></button>
-            <button className="bg-[#262628] text-white rounded-lg px-16 py-6 text-2xl"> <Link href={"/"}> Remover </Link></button>
-            <button className="bg-[#262628] text-white rounded-lg px-16 py-6 text-2xl"> <Link href={"/"}> Editar</Link></button>
+            <div className='flex flex-col mt-64 mx-auto text-2xl font-light gap-6'>
+              <button onClick={()=>{agendamento? setAgendamentos(false): setAgendamentos(true)}}  className='border-b-2 border-r-2 border-white p-5 hover:shadow-lg shadow-gray-500'>
+                agendamentos
+              </button>
 
-             </div>
+              <button onClick={()=>{calendar? setCalendar(false) : setCalendar(true)}} className='border-b-2 border-r-2 border-white p-5 hover:shadow-lg shadow-gray-500'>
+                calendario
+              </button>
+
+              <button className='border-b-2 border-r-2 border-white p-5 hover:shadow-lg shadow-gray-500'>
+                faturamento
+              </button>
+
+
+            </div>
+            <Link className=' mt-80 mx-auto border-2 border-white p-5 hover:shadow-lg shadow-gray-500 rounded-2xl' href={`/login`}>
+                <button >logout</button>
+            </Link>
+      </div>
+
+      <div className='flex-col overflow-hidden'>
+          {calendar && ( 
+            <>
+            {agendamento && setAgendamentos(false)}
+            <Calendar />
+            </>
+        )}
+          {agendamento &&  (
+            <>
+              <Bookings />
+              {calendar && setCalendar(false)}
+            </>
+          )}
         </div>
 
 
-        <button className="flex-1 bg-[#262628] text-white rounded-lg px-10 py-24 text-2xl">
-          Faturamento
-        </button>
-      </div>
+    </div>
+
       
     </div>
+
+    <Footer />
+
   </div>
 )
 }
+
 

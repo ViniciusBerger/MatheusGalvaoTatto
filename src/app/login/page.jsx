@@ -19,6 +19,7 @@ export default function page() {
     ] = useSignInWithEmailAndPassword(auth);
 
     const router = useRouter()
+    
     const logout = () => {
         auth.signOut()
         router.push("/")
@@ -91,4 +92,6 @@ export default function page() {
             <Footer color="black" textcolor="white" />
         </div>
         )
-}
+
+    }
+
