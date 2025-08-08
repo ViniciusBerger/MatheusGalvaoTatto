@@ -3,48 +3,32 @@ import Footer from "../_components/footer/footer"
 import Header from "../_components/header/header"
 import Link from "next/link"
 import {useRouter} from "next/navigation"
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { auth } from "../_utils/firebase";
-import { useEffect } from "react"
-
 
 
 export default function page() {
 
-    const [
-        signInWithEmailAndPassword,
-        user,
-        loading,
-        error,
-    ] = useSignInWithEmailAndPassword(auth);
-
     const router = useRouter()
     
-    const logout = () => {
-        auth.signOut()
-        router.push("/")
-    }
-
 
     const handleSubmit = async (event) => {
         event.preventDefault()
-        console.log("Form submitted")
-        const email = event.target.email.value
-        const password = event.target.password.value
+        // console.log("Form submitted")
+        // const email = event.target.email.value
+        // const password = event.target.password.value
 
-        try {
-            await signInWithEmailAndPassword(email, password)
-        }
-        catch (error) {
-            console.error("Login failed", error)
-        }
+        // try {
+        //     await signInWithEmailAndPassword(email, password)
+        // }
+        // catch (error) {
+        //     console.error("Login failed", error)
+        // }
         
     }
 
-    useEffect(() => {
-        if (user) {
-            router.push(`/login/${user.user.uid}`)
-        } [user] })
+    // useEffect(() => {
+    //     if (user) {
+    //         router.push(`/login/${user.user.uid}`)
+    //     } [user] })
 
     
 

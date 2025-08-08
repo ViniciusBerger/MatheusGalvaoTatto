@@ -19,7 +19,7 @@ const bungee = Bungee({
 
 export const metadata = {
   title: "Matheus Galvão",
-  description: "Portfolio",
+  description: "Tatto artist",
 };
 
 export default function RootLayout({ children }) {

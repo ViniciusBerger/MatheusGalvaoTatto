@@ -28,7 +28,6 @@ body {
 }
 
 
-/* Estilo dos botões do FullCalendar com Tailwind */
 .fc .fc-button {
   @apply bg-black text-white px-16 py-8 rounded-lg text-sm font-medium shadow-lg transition duration-200 m-8;
 }
