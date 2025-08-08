@@ -4,14 +4,13 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { auth } from '@/app/_utils/firebase'
 import Header from '@/app/_components/header/header'
 import Calendar from '@/app/_components/calendar/calendar'
 import Footer from '@/app/_components/footer/footer'
 import Bookings from '@/app/_components/bookings/bookings'
 
 export default function ClientPage({ id }) {
-  const [user, loading] = useAuthState(auth)
+  
 
   const [calendar, setCalendar] = useState(false)
   const [agendamento, setAgendamentos] = useState(false)
@@ -19,13 +18,13 @@ export default function ClientPage({ id }) {
 
    
 
-  useEffect(() => {
-    if (!loading && (!user || user.uid !== id)) {
-      router.push('/login')
-    }
-  }, [user])
+  // useEffect(() => {
+  //   if (!loading && (!user || user.uid !== id)) {
+  //     router.push('/login')
+  //   }
+  // }, [user])
 
-  if (loading || !user) return <p className='text-center text-3xl items-center'>Loading...</p>
+  // if (loading || !user) return <p className='text-center text-3xl items-center'>Loading...</p>
 
   return (
   <div>
