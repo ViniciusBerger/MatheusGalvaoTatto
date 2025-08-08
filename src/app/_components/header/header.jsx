@@ -11,7 +11,7 @@ export default function Header() {
 
         {/* Center Logo (Grid Column 2) */}
         <div className="flex justify-center">
-            <Link href={"/login"}>
+            <Link href={"/"}>
             <img className="h-12 md:h-16" src="/logo-transp.png" alt="Logo" />
             </Link>
         </div>
