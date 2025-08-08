@@ -6,23 +6,26 @@ export default function Footer({color, textcolor}) {
             <div className="p-4 lg:mt-20 lg:ml-16 lg:w-1/3">
                 <h2 className="text-xl font-bold mb-4 lg:mb-16">HORARIO DE FUNCIONAMENTO</h2>
                 <div className="space-y-2">
-                    <p className="flex justify-between w-full sm:w-60 mb-2">
-                        <span>Segunda:</span> <span>10:00 - 19:00</span>
+                    <p className="flex justify-between items-center w-full sm:w-80 mb-2">
+                        <span>Segunda-feira:</span> <span>10:00 - 19:00</span>
                     </p>
-                    <p className="flex justify-between w-full sm:w-60 mb-2">
-                        <span>Terça:</span> <span>10:00 - 19:00</span>
+                    <p className="flex justify-between items-center w-full sm:w-80 mb-2">
+                        <span>Terça-feira:</span> <span>10:00 - 19:00</span>
                     </p>
-                    <p className="flex justify-between w-full sm:w-60 mb-2">
-                        <span>Quarta:</span> <span>10:00 - 19:00</span>
+                    <p className="flex justify-between items-center w-full sm:w-80 mb-2">
+                        <span>Quarta-feira:</span> <span>10:00 - 19:00</span>
                     </p>
-                    <p className="flex justify-between w-full sm:w-60 mb-2">
-                        <span>Quinta:</span> <span>10:00 - 19:00</span>
+                    <p className="flex justify-between items-center w-full sm:w-80 mb-2">
+                        <span>Quinta-feira:</span> <span>10:00 - 19:00</span>
                     </p>
-                    <p className="flex justify-between w-full sm:w-60 mb-2">
-                        <span>Sexta:</span> <span>10:00 - 19:00</span>
+                    <p className="flex justify-between items-center w-full sm:w-80 mb-2">
+                        <span>Sexta-feira:</span> <span>10:00 - 19:00</span>
                     </p>
-                    <p className="flex justify-between w-full sm:w-60 mb-2">
+                    <p className="flex justify-between items-center w-full sm:w-80 mb-2">
                         <span>Sábado:</span> <span>10:00 - 19:00</span>
+                    </p>
+                    <p className="flex justify-between items-center w-full sm:w-80 mb-2">
+                        <span>Domingo:</span> <span>fechado</span>
                     </p>
                 </div>
             </div>
@@ -47,16 +50,16 @@ export default function Footer({color, textcolor}) {
                 <div className="flex flex-row items-center space-x-3 justify-center lg:justify-center space-between lg:mt-32">
                     <Link 
                         className="underline" 
-                        href={"https://www.instagram.com/galvao_tattooart/"}><img className="w-8 h-8 rounded-lg" src="instagram.jpg" alt="instagram"></img></Link>
+                        href={"https://www.instagram.com/galvao_tattooart/"}><img className="w-8 h-8 rounded-lg" src="instagram.png" alt="instagram"></img></Link>
                     
                     <Link   
                         className="underline" 
                         target="blank"
-                        href={"https://wa.me/+5527997631008"}><img className="w-8 h-8 rounded-lg" src="whatsapp.jpg" alt="whatsapp"></img></Link>
+                        href={"https://wa.me/+5527997631008"}><img className="w-8 h-8 rounded-lg" src="whatsapp.png" alt="whatsapp"></img></Link>
                     
                     <Link 
                         className="underline" 
-                        href={"https://www.tiktok.com/@matheusgalvaotattoo"}><img className="w-8 h-8 rounded-lg" src="tiktok.jpg" alt="tiktok"></img></Link>
+                        href={"https://www.tiktok.com/@matheusgalvaotattoo"}><img className="w-8 h-8 rounded-lg" src="tiktok.png" alt="tiktok"></img></Link>
                 </div>
             </div>
         </footer>

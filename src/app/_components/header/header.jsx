@@ -3,13 +3,23 @@ import Link from 'next/link'
 export default function Header() {
     
     return (
-        <nav className="flex items-center justify-center w-full bg-#17171799 p-4">
-            <ul className="mt-2 ml-8 flex item-center justify-around  space-x-3 text-[#F47700] w-full max-h-20">
-                <li className="text-white flex mt-8 ml-10"><Link href={"/"}>HOME</Link></li>
-                <li><Link href={"/login"}> <img className="h-20" src="/logo-transp.png" alt="Logo" /></Link></li>
-                <li className="text-white flex mt-8 "><Link href={"/postatuagem"}>PÓS-TATUAGEM</Link></li>
-            </ul>
+       <nav className="flex flex-col md:grid md:grid-cols-3 items-center w-full bg-black p-4 md:p-12 text-lg md:text-2xl">
+        {/* Left Link (Grid Column 1) */}
+        <div className="flex justify-center md:justify-start">
+            <Link href={"/"} className="text-white my-2 md:ml-40">HOME</Link>
+        </div>
 
+        {/* Center Logo (Grid Column 2) */}
+        <div className="flex justify-center">
+            <Link href={"/login"}>
+            <img className="h-12 md:h-16" src="/logo-transp.png" alt="Logo" />
+            </Link>
+        </div>
+
+        {/* Right Link (Grid Column 3) */}
+        <div className="flex justify-center md:justify-end">
+            <Link href={"/postatuagem"} className="text-white my-2 md:mr-40">PÓS-TATUAGEM</Link>
+        </div>
         </nav>
     )
 }
