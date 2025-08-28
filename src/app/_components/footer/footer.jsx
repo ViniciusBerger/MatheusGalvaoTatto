@@ -7,22 +7,22 @@ export default function Footer({color, textcolor}) {
                 <h2 className="text-xl font-bold mb-4 lg:mb-16">HORARIO DE FUNCIONAMENTO</h2>
                 <div className="space-y-2">
                     <p className="flex justify-between items-center w-full sm:w-80 mb-2">
-                        <span>Segunda-feira:</span> <span>10:00 - 19:00</span>
+                        <span>Segunda-feira:</span> <span>12:00 - 19:00</span>
                     </p>
                     <p className="flex justify-between items-center w-full sm:w-80 mb-2">
-                        <span>Terça-feira:</span> <span>10:00 - 19:00</span>
+                        <span>Terça-feira:</span> <span>12:00 - 19:00</span>
                     </p>
                     <p className="flex justify-between items-center w-full sm:w-80 mb-2">
-                        <span>Quarta-feira:</span> <span>10:00 - 19:00</span>
+                        <span>Quarta-feira:</span> <span>12:00 - 19:00</span>
                     </p>
                     <p className="flex justify-between items-center w-full sm:w-80 mb-2">
-                        <span>Quinta-feira:</span> <span>10:00 - 19:00</span>
+                        <span>Quinta-feira:</span> <span>12:00 - 19:00</span>
                     </p>
                     <p className="flex justify-between items-center w-full sm:w-80 mb-2">
-                        <span>Sexta-feira:</span> <span>10:00 - 19:00</span>
+                        <span>Sexta-feira:</span> <span>12:00 - 19:00</span>
                     </p>
                     <p className="flex justify-between items-center w-full sm:w-80 mb-2">
-                        <span>Sábado:</span> <span>10:00 - 19:00</span>
+                        <span>Sábado:</span> <span>12:00 - 19:00</span>
                     </p>
                     <p className="flex justify-between items-center w-full sm:w-80 mb-2">
                         <span>Domingo:</span> <span>fechado</span>
@@ -31,19 +31,49 @@ export default function Footer({color, textcolor}) {
             </div>
 
             <div className="lg:w-1/3 lg:pl-5 lg:mt-20 p-4">
-                <h2 className="text-xl font-bold mb-4 lg:mb-8 text-center">LOCATION</h2>
-                <Link 
-                    className="block mb-4 lg:ml-2 underline text-center lg:text-left" 
-                    href={"https://www.google.com/maps?ll=-20.368529,-40.662341&z=15&t=m&hl=pt-BR&gl=CA&mapclient=embed&q=Av.+Kurt+Lewin,+545+-+Carlos+Schwambach+Domingos+Martins+-+ES+29260-000+Brasil"}>Av. Kurt Lewin - 545 Domingos Martins - ES</Link>
+  
 
-                <iframe 
-                    className="w-full h-64 sm:h-80 lg:h-46 rounded-lg shadow-lg" 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.3483157483693!2d-40.66491562513505!3d-20.368523552113075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb9b51a5a14fb9b%3A0x8ac100977593c444!2sAv.%20Kurt%20Lewin%2C%20545%20-%20Carlos%20Schwambach%2C%20Domingos%20Martins%20-%20ES%2C%2029260-000%2C%20Brasil!5e0!3m2!1spt-BR!2sca!4v1743745585629!5m2!1spt-BR!2sca" 
-                    allowFullScreen="" 
-                    loading="lazy" 
-                    referrerPolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+  <div className="group mb-8">
+    <h2 className="text-xl font-bold mb-2 text-center cursor-pointer">Domingos Martins</h2>
+    <Link
+      className="block mb-2 lg:ml-2 underline text-center lg:text-left"
+      href="https://www.google.com/maps?ll=-20.368529,-40.662341&z=15&t=m&hl=pt-BR&gl=CA&mapclient=embed&q=Av.+Kurt+Lewin,+545+-+Carlos+Schwambach+Domingos+Martins+-+ES+29260-000+Brasil"
+    >
+      Rua Adolpho Hülle 50, Domingos Martins ES, Brazil
+    </Link>
+
+    <div className="max-h-0 overflow-hidden opacity-0 group-hover:max-h-[500px] group-hover:opacity-100 transition-all duration-500">
+      <iframe
+        className="w-full h-64 sm:h-80 lg:h-46 rounded-lg shadow-lg mt-2"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3384.9920930710405!2d-40.65958786010742!3d-20.360694885253906!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb9b51387a012e1%3A0x336b98ffa4a8e76f!2sR.%20Adolfo%20Hulle%2C%2050%20-%20Domingos%20Martins%2C%20ES%2C%2029260-000%2C%20Brazil!5e1!3m2!1sen!2sca!4v1756424202621!5m2!1sen!2sca"
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+
+    <div className="group">
+        <h2 className="text-xl font-bold mb-2 text-center cursor-pointer">Vila Velha</h2>
+        <Link
+        className="block mb-2 lg:ml-2 underline text-center lg:text-left"
+        href="https://www.google.com/maps?ll=-20.368529,-40.662341&z=15&t=m&hl=pt-BR&gl=CA&mapclient=embed&q=Av.+Kurt+Lewin,+545+-+Carlos+Schwambach+Domingos+Martins+-+ES+29260-000+Brasil"
+        >
+        R. Pará, n° 40 - loja 3 e 4 - Praia da Costa, Vila Velha - ES, Brazil
+        </Link>
+
+        <div className="max-h-0 overflow-hidden opacity-0 group-hover:max-h-[500px] group-hover:opacity-100 transition-all duration-500">
+        <iframe
+            className="w-full h-64 sm:h-80 lg:h-46 rounded-lg shadow-lg mt-2"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.943321625602!2d-40.28956382231624!3d-20.34396000267822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb817a56d056549%3A0x3dd6e95b1afa233d!2sStudio%20%C3%82ncora%20tattoo!5e0!3m2!1sen!2sca!4v1756425117011!5m2!1sen!2sca"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+        </div>
+    </div>
+    </div>
+
 
             <div className="lg:w-1/3 text-center lg:mt-20 p-4">
                 <h2 className="text-xl font-bold mb-4 lg:mb-20 text-center">REDES SOCIAIS</h2>
