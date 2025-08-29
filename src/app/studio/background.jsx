@@ -1,14 +1,15 @@
 export default function Background() {
   return (
-    <video
-      className="m-5 ml-10 text-center w-full sm:w-3/4 md:w-2/5 max-h-1/4 object-cover rounded-xl shadow-lg"
-      autoPlay
-      loop
-      muted
-    >
-      <source src="/videocard.mp4" type="video/mp4" />
-      {/* Ensure the file exists in the public folder */}
-      Your browser does not support the video tag.
-    </video>
+    <section className="w-full px-4 sm:px-6 lg:px-8 my-8">
+      <video
+        className="w-full h-auto rounded-xl shadow-lg object-cover"
+        autoPlay
+        loop
+        muted
+      >
+        <source src="/videocard.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
   );
 }
