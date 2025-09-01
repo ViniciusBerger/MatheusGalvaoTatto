@@ -35,7 +35,7 @@ export default function Landing() {
 
         {/* Buttons */}
         <div className="mt-8 flex flex-col md:flex-row items-center w-full max-w-md space-y-4 md:space-y-0 md:space-x-4">
-          <Link target="_blank" href="https://wa.me/+5527997631008" className="w-full">
+          <Link target="_blank" href="https://wa.me/+5527997620481" className="w-full">
             <button className="bg-[#242424] w-full px-6 py-4 rounded-lg">
               AGENTE SEU HORÁRIO
             </button>
