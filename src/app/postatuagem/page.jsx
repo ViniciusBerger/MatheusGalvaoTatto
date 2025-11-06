@@ -1,8 +1,8 @@
 "use client"
 import Content from "./content/content"
-import Header from "../_components/header/header"
+import Header from "../components/header/header"
 import Banner from "./banner/banner"
-import Footer from "../_components/footer/footer"
+import Footer from "../components/footer/footer"
 export default function page() {
 
     return (

@@ -1,5 +1,5 @@
-import Footer from '../_components/footer/footer';
-import Header from '../_components/header/header';
+import Footer from '../components/footer/footer';
+import Header from '../components/header/header';
 import Background from './background';
 
 export default function Page() {

@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 export default function Landing() {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden ">
     <video
-      className="absolute top-0 left-0 w-full h-full object-cover"
+      className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
       autoPlay
       loop
       muted
@@ -31,12 +31,16 @@ export default function Landing() {
       </div>
 
       <div className="mt-10 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
-      <button className="bg-[#242424] px-6 py-4 rounded-lg">
-        <Link target="blank" href="https://wa.me/+5527997631008">Agende seu horario</Link>
-      </button>
-      <button className="bg-[#242424] px-6 ml-2 py-4 rounded-lg">
-        <Link href="/studio">Conheça nosso estúdio</Link>
-      </button>
+        <button className="bg-[#242424] px-6 py-4 rounded-lg">
+          <Link target="blank" href="https://wa.me/+5527997631008">Agende seu horario</Link>
+        </button>
+        <button className="bg-[#242424] px-6 ml-2 py-4 rounded-lg">
+          <Link target='blank' href="https://pay.hotmart.com/W102551346J?bid=1762222082920">Segredos do realismo</Link>
+        </button>
+        <button className="bg-[#242424] px-6 ml-2 py-4 rounded-lg">
+          <Link href="/studio">Conheça nosso estúdio</Link>
+        </button>
+        
       </div>
     </div>
     </div>
