@@ -10,6 +10,8 @@ export default function Landing() {
       autoPlay
       loop
       muted
+      playsInline
+      preload="metadata"
     >
       <source src="/background.mp4" type="video/mp4" />
       Your browser does not support the video tag.
