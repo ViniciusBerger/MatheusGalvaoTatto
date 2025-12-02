@@ -12,8 +12,8 @@ export default function Header() {
                 </Link>
             </div>
 
-            <Link href="/postatuagem" className="text-white my-2 md:mr-40">
-                PÓS-TATUAGEM
+            <Link href="/studio" className="text-white my-2 md:mr-40">
+                STUDIO
             </Link>
         </nav>
     )
