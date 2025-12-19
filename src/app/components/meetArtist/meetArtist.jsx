@@ -1,4 +1,7 @@
 "use client"
+
+import Link from "next/link";
+
 export default function MeetArtist() {
     return (
         <section className="bg-gradient-to-r from-[#D9D9D9] via-[#F0F0F0] to-[#D9D9D9] px-4 sm:px-6 lg:px-8 py-12">
@@ -11,20 +14,25 @@ export default function MeetArtist() {
                     alt="profile picture" 
                 />
                 
-                {/* Text */}
-                <div className="w-full lg:w-2/3">
-                    <h1 className="text-gray-700 text-center lg:text-left text-xl sm:text-2xl md:text-3xl lg:text-5xl mb-4 pb-4 border-b-2 border-[#242424]">
+               <div className="w-full lg:w-2/3 mx-auto text-center">
+                    <h1 className="text-gray-700 text-center mx-auto text-xl sm:text-2xl md:text-3xl lg:text-5xl mb-4 pb-4 border-b-2 border-[#242424]">
                         CONHEÇA MATHEUS GALVÃO
                     </h1>
-                    <div className="mt-8 lg:mt-16">
-                        <p className="text-gray-700 mt-4 text-sm sm:text-base md:text-lg lg:text-xl lg:w-2/3 mx-auto lg:mx-0 text-justify">
-                            Eu sou Matheus Galvão, tenho 22 anos e sou de Domingos Martins, Espírito Santo. Trabalho como tatuador há 2 anos e meio, com um foco especial no estilo de realismo em preto e cinza. Desde criança, a arte sempre fez parte da minha vida, e hoje eu tenho o privilégio de viver dela, criando tatuagens que contam histórias únicas.
-                        </p>
-                        <p className="text-[#242424] mt-4 text-sm sm:text-base lg:text-lg lg:w-1/2 mx-auto lg:mx-0 text-right">
-                            09/07/2024
-                        </p>
+
+                    <p className="text-gray-700 mt-4 text-sm sm:text-base md:text-lg lg:text-xl mx-auto text-justify">
+                        Eu sou Matheus Galvão, tenho 24 anos e sou de Domingos Martins, Espírito Santo. Trabalho como tatuador há 4 anos e meio, acumulando mais de 28.000 horas de experiência. Meu foco principal é o estilo de <span className="underline text-black">realismo</span> em preto e cinza. Desde a infância, a arte sempre esteve presente na minha vida e, hoje, tenho o privilégio de transformá-la em profissão, criando tatuagens que registram histórias únicas na pele.
+                    </p>
+
+                    <div className="w-full flex justify-center mt-8">
+                        <Link
+                        target="_blank"
+                        href="https://pay.hotmart.com/W102551346J?bid=1762222082920"
+                        className="inline-block px-6 py-3 bg-black/60 text-white font-medium rounded-lg shadow-md backdrop-blur-sm border border-white/40 hover:bg-black/80 hover:border-yellow-400 hover:shadow-lg transition-all duration-200"
+                        >
+                        🛒 Compre aqui: Os segredos do realismo
+                        </Link>
                     </div>
-                </div>
+                    </div>
             </div>
         </section>
     );

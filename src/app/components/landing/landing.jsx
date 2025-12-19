@@ -33,8 +33,9 @@ export default function Landing() {
       </div>
 
       <div className="mt-10 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
-        <button className="bg-[#242424] px-6 ml-2 py-4 rounded-lg">
-          <Link target='blank' href="https://pay.hotmart.com/W102551346J?bid=1762222082920">Segredos do realismo</Link>
+        
+        <button className="inline-block px-6 py-3 bg-black/60 text-white font-medium rounded-lg shadow-md backdrop-blur-sm border border-white-500/40 hover:bg-black/80 hover:border-yellow-400 hover:shadow-lg transition-all duration-200">
+          <Link target='blank' href="https://pay.hotmart.com/W102551346J?bid=1762222082920">🛒 Compre aqui: Os segredos do realismo</Link>
         </button>
         
       </div>
