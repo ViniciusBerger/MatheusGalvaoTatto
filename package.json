@@ -14,7 +14,7 @@
     "@fullcalendar/react": "^6.1.17",
     "@next/font": "^14.2.15",
     "firebase": "^11.7.1",
-    "next": "^15.3.2",
+    "next": "15.3.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-firebase-hooks": "^5.1.1",
